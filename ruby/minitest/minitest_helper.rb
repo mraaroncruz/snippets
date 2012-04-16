@@ -6,9 +6,12 @@ require File.expand_path('../../config/environment', __FILE__) unless @norails |
 
 require "minitest/autorun"
 require "minitest/rails"
-begin; require 'turn/autorun'; rescue LoadError; end
 
-Turn.config.format = :progress
+begin
+  require 'turn/autorun'
+  Turn.config.format = :progress
+rescue LoadError
+end
 
 def require_in_directory dir, file
   require File.expand_path("../../#{dir}/#{file}.rb", __FILE__)
