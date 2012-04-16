@@ -2,7 +2,7 @@
 # require "minitest/pride"
 
 ENV["RAILS_ENV"] = "test"
-require File.expand_path('../../config/environment', __FILE__) unless @norails || !defined?(MiniTest::Rails)
+require File.expand_path('../../config/environment', __FILE__) unless @norails || !defined?(Rails)
 
 require "minitest/autorun"
 require "minitest/rails"
